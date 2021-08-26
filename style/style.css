@@ -1,0 +1,182 @@
+*{
+	box-sizing: border-box;
+}
+html, body{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: 'Playfair Display', serif;
+	background-color: rgba(224, 224, 224, 0.43);
+}
+
+
+#main{
+	width: 100%;
+	height: 100%;
+	padding: 1%;
+	-ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none; 
+    user-select: none;
+}
+
+/*********"Прокрутка недель"********/
+.scrollingWeeks{
+	width: 100%;
+}
+#btnDateNext{
+	float: right;
+}
+#btnDateBack, #btnDateNext{
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	background-color: rgba(62, 247, 170, 0.76);
+	padding:0.5% 2%;
+	cursor: pointer;
+	color: #424242;
+}
+#btnDateBack:hover, #btnDateNext:hover{
+	color: rgba(62, 247, 170, 0.76);
+	background-color: #424242;
+}
+
+/*********"Таблица заданий"********/
+.divDiagram{
+	width: 80%;
+	float: left;
+}
+.calendarTable{
+	table-layout: fixed;
+	word-wrap: break-word;
+	width: 100%;
+	text-align: center;
+	margin-top: 1%;
+	
+	
+}
+.tableTitle td{
+	border-right: 1px solid #ededed;
+	font-family: 'Alumni Sans', sans-serif;
+	font-size: 1.2em;
+}
+#tableBody td{
+	border-right: 1px solid #d9d9d9;
+	vertical-align: middle;
+	color: #424242;
+	height: 2em;
+	background-color: #fff;
+}
+#tableBody p{
+	cursor: pointer;
+	background-color: rgba(62, 247, 170, 0.76);
+	margin-bottom: 1%;
+	font-size: 0.9em;
+	padding: 3% 0;
+}
+
+[data-tooltip]::after {
+  	content: attr(data-tooltip); 
+  	position: absolute; 
+ 	width: 10%; 
+    background-color: rgb(214, 214, 214); 
+    color: #424242; 
+    padding: 0.5em; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 3px; 
+    pointer-events: none; 
+    opacity: 0; 
+    transition: 1s; 
+} 
+[data-tooltip]:hover::after {
+    opacity: 1; 
+}
+
+#tableBody tr{
+	border-bottom: 2px solid #a8a8a8;
+	height: 3em;
+}
+.date{
+	background-color: rgba(214, 214, 214, 0.68);
+}
+#tableBody .name{
+	background-color: rgba(62, 247, 170, 0.76);
+}
+
+/*********"Обратная связь"********/
+.divBacklog{
+	width: 20%;
+	min-height: 95%;
+	max-height: 95%;
+	float: left;
+	background-color: rgba(214, 214, 214, 0.68);
+	border-radius: 5px;
+	text-align: center;
+	overflow-x: hidden;
+    overflow-y: auto;
+}
+.sticy{
+	position: sticky;
+    top: 0;
+    background-color: rgba(214, 214, 214, 0.68);
+}
+.titleBacklog{
+	font-size: 1.5em;
+	font-weight: 700;
+	margin-bottom: 1%;
+	color: #424242;
+}
+.searchDiv{
+	padding-bottom: 5%;
+}
+#search{
+	width: 90%;
+	outline: none;
+	border: none;
+	padding: 1%;
+	color: #424242;
+}
+
+#taskBacklog{
+	cursor: pointer;
+	padding: 0.4% 3%;
+}
+.shift{
+	background-color: rgba(62, 247, 170, 0.76);
+	font-size: 0.9em;
+	position: absolute;;
+	display: block;
+	border-radius: 3px;
+	padding: .5% 2%;
+}
+
+.taskText{
+	cursor: pointer;
+	display: block;
+	margin-bottom: 2%;
+	padding: 1%;
+	background-color: #fff; 
+	border-radius: 3px;
+	text-align: left;
+}
+.taskText:hover{
+	-webkit-box-shadow: -15px -17px 37px -22px rgba(60, 135, 193, 0.62) inset;
+	-moz-box-shadow: -15px -17px 37px -22px rgba(60, 135, 193, 0.62) inset;
+	box-shadow: -15px -17px 37px -22px rgba(60, 135, 193, 0.62) inset;
+}
+#taskTitle{
+	color: blue;
+	font-weight: 700;
+	margin-bottom: 3%;
+}
+#message{
+	color: #424242;
+	font-style: italic;
+}
+
+
+/********Поиск*******/
+.hide{
+	display: none;
+}
